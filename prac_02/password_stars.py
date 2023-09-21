@@ -11,16 +11,28 @@ error check if the input doesn't match the minimum length
 the program should print "*" same length as the password
 
 """
-minimum_length = 8
 
-user_password = input("Password: ")
-while len(user_password) < minimum_length:
-    print("Password must be minimum of 8")
+MINIMUM_LENGTH = 8
+
+
+def main():
+    password = get_password()
+
+    print_stars(password)
+
+
+def print_stars(password):
+    if password:
+        character = len(password) * "*"
+        print(character)
+
+
+def get_password():
     user_password = input("Password: ")
+    while len(user_password) < MINIMUM_LENGTH:
+        print("Password must be minimum of 8")
+        user_password = input("Password: ")
+    return user_password
 
-if user_password:
-    character = len(user_password) * "*"
-    print(character)
 
-
-
+main()

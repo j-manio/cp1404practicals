@@ -10,8 +10,19 @@ def main():
     print(MENU)
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
-        print("Invalid score")
+        if user_choice == "G":
+            score = int(input("Score: "))
+            while score < 0 or score > 100:
+                print("Invalid score")
+                score = int(input("Score: "))
+        elif user_choice == "P":
+            pass
+        elif user_choice == "S":
+            pass
+        else:
+            print("Invalid choice")
+        print(MENU)
         user_choice = str(input(">>>: ").upper())
-
+    print("Farewell")
 
 main()

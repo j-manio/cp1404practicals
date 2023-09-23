@@ -17,17 +17,18 @@ MINIMUM_LENGTH = 8
 
 def main():
     password = get_password()
-
     print_stars(password)
 
 
 def print_stars(password):
+    """Prints star that equals to password length"""
     if password:
         character = len(password) * "*"
         print(character)
 
 
 def get_password():
+    """Prompt user to input pass no less than 8"""
     user_password = input("Password: ")
     while len(user_password) < MINIMUM_LENGTH:
         print("Password must be minimum of 8")

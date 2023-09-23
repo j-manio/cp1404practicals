@@ -24,8 +24,9 @@ MENU = ("(G)et valid score\n"
 
 def main():
     valid_score = 0
-    print(MENU)
 
+    print(MENU)
+    get_valid_score()  # testing if the function works before the menu loop
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
         if user_choice == "G":

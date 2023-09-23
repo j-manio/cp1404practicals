@@ -58,7 +58,7 @@ def get_valid_score():
 
 
 def determine_result(valid_score):
-    """Determine the result based on a given valid code"""
+    """Determine the result based on a given valid score"""
     if valid_score >= 90:
         return "Excellent"
     elif valid_score >= 50:

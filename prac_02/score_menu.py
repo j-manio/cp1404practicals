@@ -1,5 +1,4 @@
 """" Score Menu Program """
-from prac_02 import score
 
 MENU = ("(G)et valid score\n"
         "(P)rint result\n"
@@ -25,6 +24,18 @@ def main():
         print(MENU)
         user_choice = str(input(">>>: ").upper())
     print("Farewell")
+
+
+def determine_result(valid_score):
+    if valid_score < 0 or valid_score > 100:
+        return "Invalid score"
+    else:
+        if valid_score >= 90:
+            return "Excellent"
+        elif valid_score >= 50:
+            return "Pass"
+        else:
+            return "Bad"
 
 
 main()

@@ -7,21 +7,27 @@ MENU = ("(G)et valid score\n"
 
 
 def main():
+    valid_score = 0
     print(MENU)
 
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
         if user_choice == "G":
-            get_valid_score()
+            valid_score = get_valid_score()
         elif user_choice == "P":
-            pass
+            print(f"Your score is {valid_score} is considered {determine_result(valid_score)}")
         elif user_choice == "S":
-            pass
+            print(f"Star: {print_stars(valid_score)}")
         else:
             print("Invalid choice")
         print(MENU)
         user_choice = str(input(">>>: ").upper())
     print("Farewell")
+
+
+def print_stars(valid_score):
+    character = valid_score * "*"
+    return character
 
 
 def get_valid_score():

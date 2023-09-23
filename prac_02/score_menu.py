@@ -13,11 +13,11 @@ def main():
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
         if user_choice == "G":
-            valid_score = get_valid_score()
+            valid_score = get_valid_score()  # this will get valid score
         elif user_choice == "P":
             print(f"Your score is {valid_score} is considered {determine_result(valid_score)}")
         elif user_choice == "S":
-            print(f"Star: {print_stars(valid_score)}")
+            print(f"Star: {print_stars(valid_score)}")  # print stars equal to score
         else:
             print("Invalid choice")
         print(MENU)
@@ -26,11 +26,13 @@ def main():
 
 
 def print_stars(valid_score):
+    """Creates a star that equals to score"""
     character = valid_score * "*"
     return character
 
 
 def get_valid_score():
+    """Prompts user to enter a valid score within 0 - 100"""
     valid_score = int(input("Score: "))
     while valid_score < 0 or valid_score > 100:
         print("Invalid score")
@@ -39,6 +41,7 @@ def get_valid_score():
 
 
 def determine_result(valid_score):
+    """Determine the result based on a given valid code"""
     if valid_score >= 90:
         return "Excellent"
     elif valid_score >= 50:

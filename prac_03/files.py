@@ -18,3 +18,11 @@ in_file = open(FILENAME, 'r')
 text = in_file.read()
 in_file.close()
 print(text)
+
+with open(DATA_FILE, 'r') as file:
+    first_number = int(file.readline())
+    second_number = int(file.readline())
+    total = first_number + second_number
+    print(total)
+
+

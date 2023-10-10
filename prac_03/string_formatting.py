@@ -37,6 +37,8 @@ print(f"{year} {name} for about ${cost:,.0f}!")
 # 1922 Gibson L-5 CES for about $16,035!
 
 # TODO: Using a for loop with the range function and string formatting,
+for i in range(0, 200, 50):
+    print(f"{i:>6}")
 # produce the following right-aligned output (DO NOT use a list):
 #   0
 #  50

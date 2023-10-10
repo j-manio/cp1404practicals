@@ -19,15 +19,15 @@ text = in_file.read()
 in_file.close()
 print(text)
 
-with open(DATA_FILE, 'r') as file:
-    first_number = int(file.readline())
-    second_number = int(file.readline())
+with open(DATA_FILE, 'r') as infile:
+    first_number = int(infile.readline())
+    second_number = int(infile.readline())
     total = first_number + second_number
     print(total)
 
-with open(DATA_FILE, 'r') as file:
+with open(DATA_FILE, 'r') as infile:
     total = 0
-    for line in file:
+    for line in infile:
         parts = int(line)
         total += parts
         print(total)

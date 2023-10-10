@@ -25,4 +25,9 @@ with open(DATA_FILE, 'r') as file:
     total = first_number + second_number
     print(total)
 
-
+with open(DATA_FILE, 'r') as file:
+    total = 0
+    for line in file:
+        parts = int(line)
+        total += parts
+        print(total)

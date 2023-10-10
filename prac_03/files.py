@@ -7,6 +7,7 @@ store it in text file
 open file to read
 print the stored name
 """
+DATA_FILE = "numbers.txt"
 FILENAME = "name.txt"
 name = input("Name: ")
 out_file = open(FILENAME, 'w')

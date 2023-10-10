@@ -14,4 +14,4 @@ The smallest 2.5 and the largest is 5.5
 """
 import random
 
-print(random.randrange(1, 101))  # Start on 1 and stop on 100
+print(random.randint(1, 101))  # Start on 1 and stop on 100

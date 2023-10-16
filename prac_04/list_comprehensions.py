@@ -38,7 +38,6 @@ almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
 numbers = tuple([int(number) for number in almost_numbers])
 print(numbers)
 
-
 # Prints a list of only the numbers that are
 # greater than 9 from the numbers (not strings)
 greater_number = [number for number in numbers if number > 9]

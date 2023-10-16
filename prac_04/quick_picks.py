@@ -7,6 +7,7 @@ num_pick = int(input("How many quick picks? "))
 lines = []
 for i in range(num_pick):
     line = random.randint(MIN_VALUE, MAX_VALUE)
-    print(line)
+    lines.append(line)
+print(lines)
 
 

@@ -12,6 +12,7 @@ def main():
 
 
 def display_subject_details(data):
+    """Displays subject details."""
     for class_info in data:
         print(f"{class_info[0]} is taught by {class_info[1]:12} and has {class_info[2]:>3} students")
 

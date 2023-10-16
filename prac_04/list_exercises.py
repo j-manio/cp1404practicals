@@ -7,3 +7,4 @@ for i in range(5):
     numbers.append(int(number))
 
 print(f"The first number is {numbers[0]}")
+print(f"The last number is {numbers[-1]}")

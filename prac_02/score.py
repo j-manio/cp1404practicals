@@ -22,6 +22,7 @@ def main():
     check_score(score)
     random_score = random.randint(1, 100)
     print(check_score(score))
+    print(f"Random score is {random_score} and is considered {check_score(random_score)}")
 
 
 def check_score(score):

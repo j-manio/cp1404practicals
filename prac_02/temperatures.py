@@ -11,7 +11,6 @@ MENU = """C - Convert Celsius to Fahrenheit
 
 
 def main():
-    """Function docstring"""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":

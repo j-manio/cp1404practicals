@@ -25,12 +25,17 @@ print(len(user_password) * "*")
 def main():
     """Function docstring"""
     # statements...
-    do_stuff()
+    password = get_password()
+    print(len(password) * "*")
 
 
-def do_stuff():
-    """Function docstring"""
-    # statements...
+def get_password():
+    password = input("Password: ")
+    while len(password) < MINIMUM_LENGTH:
+        print("Password must be minimum of 10")
+        password = input("Password: ")
+    return password
+
 
 
 main()

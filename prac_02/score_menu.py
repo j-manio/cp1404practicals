@@ -42,10 +42,12 @@ def main():
 
 
 def print_stars(valid_score):
+    """Print stars"""
     print(valid_score * "*")
 
 
 def determine_result(valid_score):
+    """Determine result of the given score"""
     if valid_score < 0 or valid_score > 100:
         return "Invalid score"
     elif valid_score >= 90:
@@ -57,6 +59,7 @@ def determine_result(valid_score):
 
 
 def get_valid_score(valid_score):
+    """Get valid score"""
     valid_score = int(input(">>>: "))
     while valid_score < 0 or valid_score > 100:
         print("Invalid score")

@@ -14,10 +14,13 @@ Broken program to determine score status
 #     elif score < 50:
 #         print("Bad")
 
+import random
+
 
 def main():
     score = get_score()
     check_score(score)
+    random_score = random.randint(1, 100)
     print(check_score(score))
 
 

@@ -27,7 +27,10 @@ def main():
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
         if user_choice == "G":
-            print("Get Valid Score")
+            valid_score = int(input(">>>: "))
+            while valid_score < 0 or valid_score > 100:
+                print("Invalid score")
+                valid_score = int(input(">>>: "))
         elif user_choice == "P":
             print("Print Result")
         elif user_choice == "S":

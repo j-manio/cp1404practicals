@@ -20,3 +20,23 @@ MENU = ("(G)et valid score\n"
         "(P)rint result\n"
         "(S)how stars\n"
         "(Q)uit")
+
+
+def main():
+    print(MENU)
+    user_choice = str(input(">>>: ").upper())
+    while user_choice != "Q":
+        if user_choice == "G":
+            print("Get Valid Score")
+        elif user_choice == "P":
+            print("Print Result")
+        elif user_choice == "S":
+            print("Show Stars")
+        else:
+            print("Invalid Choice")
+        print(MENU)
+        user_choice = str(input(">>>: ").upper())
+    print("Farewell")
+
+
+main()

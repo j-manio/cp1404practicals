@@ -26,6 +26,7 @@ def main():
 
 
 def check_score(score):
+    """Check the result of the score"""
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
@@ -37,6 +38,7 @@ def check_score(score):
 
 
 def get_score():
+    """Get input score"""
     score = float(input("Enter score: "))
     return score
 

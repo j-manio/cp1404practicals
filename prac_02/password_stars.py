@@ -26,6 +26,10 @@ def main():
     """Function docstring"""
     # statements...
     password = get_password()
+    print_starts(password)
+
+
+def print_starts(password):
     print(len(password) * "*")
 
 

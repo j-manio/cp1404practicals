@@ -23,6 +23,7 @@ MENU = ("(G)et valid score\n"
 
 
 def main():
+    valid_score = 0
     print(MENU)
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
@@ -32,7 +33,14 @@ def main():
                 print("Invalid score")
                 valid_score = int(input(">>>: "))
         elif user_choice == "P":
-            print("Print Result")
+            if valid_score < 0 or valid_score > 100:
+                print("Invalid score")
+            elif valid_score >= 90:
+                print("Excellent")
+            elif valid_score >= 50:
+                print("Pass")
+            else:
+                print("Bad")
         elif user_choice == "S":
             print("Show Stars")
         else:

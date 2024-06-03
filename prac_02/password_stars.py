@@ -15,3 +15,22 @@ while len(user_password) < MINIMUM_LENGTH:
     print("Password must be minimum of 10")
     user_password = input("Password: ")
 print(len(user_password) * "*")
+
+"""Module docstring"""
+
+
+# imports
+# CONSTANTS
+
+def main():
+    """Function docstring"""
+    # statements...
+    do_stuff()
+
+
+def do_stuff():
+    """Function docstring"""
+    # statements...
+
+
+main()

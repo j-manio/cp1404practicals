@@ -28,26 +28,40 @@ def main():
     user_choice = str(input(">>>: ").upper())
     while user_choice != "Q":
         if user_choice == "G":
-            valid_score = int(input(">>>: "))
-            while valid_score < 0 or valid_score > 100:
-                print("Invalid score")
-                valid_score = int(input(">>>: "))
+            valid_score = get_valid_score(valid_score)
         elif user_choice == "P":
-            if valid_score < 0 or valid_score > 100:
-                print("Invalid score")
-            elif valid_score >= 90:
-                print("Excellent")
-            elif valid_score >= 50:
-                print("Pass")
-            else:
-                print("Bad")
+            determine_result(valid_score)
+            print(f"Your score is {valid_score} is considered {determine_result(valid_score)}")
         elif user_choice == "S":
-            print(valid_score * "*")
+            print(f"Star: {print_stars(valid_score)}")
         else:
             print("Invalid Choice")
         print(MENU)
         user_choice = str(input(">>>: ").upper())
     print("Farewell")
+
+
+def print_stars(valid_score):
+    print(valid_score * "*")
+
+
+def determine_result(valid_score):
+    if valid_score < 0 or valid_score > 100:
+        return "Invalid score"
+    elif valid_score >= 90:
+        return "Excellent"
+    elif valid_score >= 50:
+        return "Pass"
+    else:
+        return "Bad"
+
+
+def get_valid_score(valid_score):
+    valid_score = int(input(">>>: "))
+    while valid_score < 0 or valid_score > 100:
+        print("Invalid score")
+        valid_score = int(input(">>>: "))
+    return valid_score
 
 
 main()

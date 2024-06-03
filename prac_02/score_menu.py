@@ -42,7 +42,7 @@ def main():
             else:
                 print("Bad")
         elif user_choice == "S":
-            print("Show Stars")
+            print(valid_score * "*")
         else:
             print("Invalid Choice")
         print(MENU)

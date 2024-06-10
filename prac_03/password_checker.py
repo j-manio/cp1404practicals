@@ -16,6 +16,7 @@ def main():
     print("\t1 or more uppercase characters")
     print("\t1 or more lowercase characters")
     print("\t1 or more numbers")
+    print(f"\t1 or more special characters: {SPECIAL_CHARACTERS}")
     if IS_SPECIAL_CHARACTER_REQUIRED:
         print("\tand 1 or more special characters: ", SPECIAL_CHARACTERS)
     password = input("> ")
@@ -43,11 +44,11 @@ def is_valid_password(password):
         elif character in SPECIAL_CHARACTERS:
             number_of_special += 1
 
-    # TODO: if any of the 'normal' counts are zero, return False
-
-    # TODO: if special characters are required, then check the count of those
-    # and return False if it's zero
-
+    if number_of_digit == 0 or number_of_lower == 0 or number_of_upper == 0 or number_of_digit == 0:
+        return False
+    if IS_SPECIAL_CHARACTER_REQUIRED:
+        if number_of_digit == 0:
+            return False
     # if we get here (without returning False), then the password must be valid
     return True
 

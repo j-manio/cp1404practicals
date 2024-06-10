@@ -16,3 +16,6 @@ write code that opens "name.txt" and reads the name (as above) then prints (note
 Hi Bob! (or whatever the name is in the file). Do not simply print the user's input variable!
 Use open and close for this question.
 """
+in_file = open(FILENAME, "r")
+print(in_file.read())
+in_file.close()

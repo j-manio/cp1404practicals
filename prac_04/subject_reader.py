@@ -12,6 +12,7 @@ def main():
 
 
 def display_subject_data(subjects):
+    """Display clear subject details"""
     for subject in subjects:
         print(f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:>3} students")
 

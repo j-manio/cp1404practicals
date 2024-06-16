@@ -40,8 +40,10 @@ numbers = list(int(number) for number in almost_numbers)
 print(type(numbers))
 print(numbers)
 
-# TODO: list comprehension to create a list of only the numbers that are
+# List comprehension to create a list of only the numbers that are
 # greater than 9 from the numbers (not strings) you just created
+greater_number = [number for number in numbers if number > 9]
+print(greater_number)
 
 # TODO: (more advanced) use a list comprehension and the join string method
 # to create a string (not list) of the last names for those full names longer than 11 characters

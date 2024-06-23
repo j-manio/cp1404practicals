@@ -10,11 +10,12 @@ INDEX_CHAMPION = 2
 
 
 def main():
-    champion_to_count = {}
     records = load_data()
+    process_records(records)
 
 
 def process_records(records):
+    """Process the data file"""
     champion_to_count = {}
     countries = set()
     for record in records:

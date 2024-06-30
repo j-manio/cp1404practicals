@@ -1,3 +1,8 @@
+"""
+Estimate: 30 minutes
+Actual:   28 minutes
+"""
+
 from prac_06.guitar import Guitar
 
 name = "Gibson L-5 CES"
